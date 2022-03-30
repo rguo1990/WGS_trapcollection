@@ -1,4 +1,4 @@
-## the script was used to calculate pi values for OR genes in Hv population
+## the script was used to calculate site-pi values for OR genes in Hv population
 
 ## calculate pi values for OR genes (OR6, OR14-16, Orco)
 vcftools --chr NWSH01000007.1  --from-bp 26260 --to-bp 30528 --out Pi-OR6 --site-pi --vcf Filtered_Hvpopulation.recode.vcf
