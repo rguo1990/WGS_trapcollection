@@ -1,4 +1,4 @@
-## the script was used to calculate pi values for the whole OR genes and their cds
+## the script was used to calculate pi values for the whole OR genes and their cds, and plot the figures.
 
 ## read the site-pi data made by vcftools
 or6 <- read.csv("/Users/rongguo/Downloads/Pi-OR6.sites.pi",sep = "\t")
@@ -64,3 +64,43 @@ sd_or11_cds <- round(sd(or11_cds$PI),3)
 or13_cds <- or13[or13$POS %in% 97:709 | or13$POS %in% 2387:2582 | or13$POS %in% 2951:3165 | or13$POS %in% 3370:4097,]
 pi_or13_cds <- round(mean(or13_cds$PI),3)
 sd_or13_cds <- round(sd(or13_cds$PI),3)
+
+library(ggplot2)
+pi_gene <- c(pi_orco,pi_or6,pi_or11,pi_or13,pi_or14,pi_or15,pi_or16)
+pi_cds <- c(pi_orco_cds,pi_or6_cds,pi_or11_cds,pi_or13_cds,pi_or14_cds,pi_or15_cds,pi_or16_cds)
+sd_gene <- c(sd_orco,sd_or6,sd_or11,sd_or13,sd_or14,sd_or15,sd_or16)
+sd_cds <- c(sd_orco_cds,sd_or6_cds,sd_or11_cds,sd_or13_cds,sd_or14_cds,sd_or15_cds,sd_or16_cds)
+gene <- c("orco","OR6","OR11","OR13","OR14","OR15","OR16")
+d <- data.frame(cbind(gene,pi_gene,pi_cds,sd_gene,sd_cds))
+
+d$pi_gene=as.numeric(as.character(d$pi_gene))
+d$pi_cds=as.numeric(as.character(d$pi_cds))
+
+y_max=pi_gene+sd_gene
+y_min=pi_gene-sd_gene
+p1 <- ggplot(d)+geom_point(aes(x=c(1:7),y=pi_gene),size=3)+
+  geom_errorbar(aes( x=c(1:7),ymax = y_max, ymin = y_min),width=.1)+
+  labs(x="Genes",y="PI(whole gene)",title="PI values of the whole genes")
+p1+expand_limits(y=c(0,1))+
+  scale_y_continuous(breaks = seq(0,1,0.2))+scale_x_discrete(limits = gene)
+
+ymax=pi_cds+sd_cds
+ymin=pi_cds-sd_cds  
+p2 <- ggplot(d)+geom_point(aes(x=c(1:7),y=pi_cds),size=3)+
+  geom_errorbar(aes( x=c(1:7),ymax = ymax, ymin = ymin),width=.1)+
+  labs(x="Genes",y="PI(CDS)",title="PI values of CDS")
+p2+expand_limits(y=c(0,1))+
+  scale_y_continuous(breaks = seq(0,1,0.2))+scale_x_discrete(limits = gene)
+
+group <- c(rep("gene",7),rep("CDS",7))
+Ymax=c(y_max,ymax)
+Ymin=c(y_min,ymin)
+d1 <- data.frame(cbind(c(rep(gene,2)),c(pi_gene,pi_cds),group,Ymax,Ymin))
+d1$V2=as.numeric(as.character(d1$V2))
+d1$Ymax=as.numeric(as.character(d1$Ymax))
+d1$Ymin=as.numeric(as.character(d1$Ymin))
+
+p3 <- ggplot(d1,aes(x=V1,y=V2,fill=group))+geom_bar(stat = 'identity',position = "dodge")+
+  geom_errorbar(aes(x=,ymax = Ymax, ymin = Ymin),width=0.7,position = position_dodge2(width = 0.5, padding = 0.5))
+  p3 + labs(x="Genes",y="PI values",title="PI values of the whole genes vs. their CDS")
+
