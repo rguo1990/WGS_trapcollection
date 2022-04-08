@@ -1,4 +1,4 @@
-## the script was used to extract the coding sequences of OR6, OR14-16 in scaffold NWSH01000007, and translate them into protein sequences
+## the script was used to extract the coding sequences of OR6, OR14-16 in scaffold NWSH01000007 from their vcf files, and translate them into protein sequences
 
 library("Biostrings")
 library("pegas")
