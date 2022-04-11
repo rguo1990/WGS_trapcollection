@@ -10,9 +10,9 @@ do
         echo $sample
         describer=$(echo ${sample} | sed 's/_R1_trimmed.fastq.gz//')
         echo $describer
-        bowtie2 -x ~/Rong/H_vir/H_sub -1 ${describer}_R1_trimmed.fastq.gz -2 ${describer}_R2_trimmed.fastq.gz --end-to-end --very-sensitive --no-unal -p 10 > ${describer}.sam
+        bowtie2 -x /media/megan/Elements3/Rong/WGS/Hs_genome/H.sub_2000.new -1 ${describer}_R1_trimmed.fastq.gz -2 ${describer}_R2_trimmed.fastq.gz --end-to-end --very-sensitive --no-unal -p 15 > ${describer}.sam
 
-     #convert file from SAM to BAM format
+        #convert file from SAM to BAM format
         samtools view -bS ${describer}.sam -o ${describer}.bam
 
         #Sort BAM file
@@ -30,9 +30,9 @@ do
         echo $sample
         describer=$(echo ${sample} | sed 's/_R1.fastq.gz//')
         echo $describer
-        bowtie2 -x ~/Rong/H_vir/H_sub -1 ${describer}_R1.fastq.gz -2 ${describer}_R2.fastq.gz --end-to-end --very-sensitive --no-unal -p 10 > ${describer}.sam
+        bowtie2 -x /media/megan/Elements3/Rong/WGS/Hs_genome/H.sub_2000.new -1 ${describer}_R1.fastq.gz -2 ${describer}_R2.fastq.gz --end-to-end --very-sensitive --no-unal -p 15 > ${describer}.sam
 
-     #convert file from SAM to BAM format
+        #convert file from SAM to BAM format
         samtools view -bS ${describer}.sam -o ${describer}.bam
 
         #Sort BAM file
@@ -53,9 +53,9 @@ do
         echo $sample
         describer=$(echo ${sample} | sed 's/_R1_trimmed.fastq.gz//')
         echo $describer
-        bowtie2 -x ~/Rong/H_vir/H_sub -1 ${describer}_R1_trimmed.fastq.gz -2 ${describer}_R2_trimmed.fastq.gz --end-to-end --very-sensitive --no-unal -p 10 > ${describer}.sam
+        bowtie2 -x /media/megan/Elements3/Rong/WGS/Hs_genome/H.sub_2000.new -1 ${describer}_R1_trimmed.fastq.gz -2 ${describer}_R2_trimmed.fastq.gz --end-to-end --very-sensitive --no-unal -p 15 > ${describer}.sam
 
-     #convert file from SAM to BAM format
+        #convert file from SAM to BAM format
         samtools view -bS ${describer}.sam -o ${describer}.bam
 
         #Sort BAM file
@@ -73,9 +73,9 @@ do
         echo $sample
         describer=$(echo ${sample} | sed 's/_R1.fastq.gz//')
         echo $describer
-        bowtie2 -x ~/Rong/H_vir/H_sub -1 ${describer}_R1.fastq.gz -2 ${describer}_R2.fastq.gz --end-to-end --very-sensitive --no-unal -p 10 > ${describer}.sam
+        bowtie2 -x /media/megan/Elements3/Rong/WGS/Hs_genome/H.sub_2000.new -1 ${describer}_R1.fastq.gz -2 ${describer}_R2.fastq.gz --end-to-end --very-sensitive --no-unal -p 15 > ${describer}.sam
 
-     #convert file from SAM to BAM format
+        #convert file from SAM to BAM format
         samtools view -bS ${describer}.sam -o ${describer}.bam
 
         #Sort BAM file
