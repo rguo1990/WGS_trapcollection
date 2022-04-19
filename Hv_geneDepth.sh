@@ -3,12 +3,30 @@
 ## OR6 gene
 samtools depth -f Hv_bamfiles.txt -r NWSH01000007.1:26260-30528 > depth/OR6_gene.depth
 ## OR6 CDS
-samtools depth -f Hv_bamfiles.txt  -r NWSH01000007.1:26260-26300 | samtools depth -f Hv_bamfiles.txt  -r NWSH01000007.1:26725-26983 | samtools depth -f Hv_bamfiles.txt  -r NWSH01000007.1:27443-27553 | samtools depth -f Hv_bamfiles.txt  -r NWSH01000007.1:28260-28492 | samtools depth -f Hv_bamfiles.txt  -r NWSH01000007.1:28790-29026 | samtools depth -f Hv_bamfiles.txt  -r NWSH01000007.1:29550-29652 | samtools depth -f Hv_bamfiles.txt  -r NWSH01000007.1:29719-29814 | samtools depth -f Hv_bamfiles.txt  -r NWSH01000007.1:30373-30528 > depth/OR6_CDS.depth 
+samtools depth -f Hv_bamfiles.txt  -r NWSH01000007.1:26260-26300 > depth/OR6_CDS_1.depth 
+samtools depth -f Hv_bamfiles.txt  -r NWSH01000007.1:26725-26983 > depth/OR6_CDS_2.depth 
+samtools depth -f Hv_bamfiles.txt  -r NWSH01000007.1:27443-27553 > depth/OR6_CDS_3.depth 
+samtools depth -f Hv_bamfiles.txt  -r NWSH01000007.1:28260-28492 > depth/OR6_CDS_4.depth
+samtools depth -f Hv_bamfiles.txt  -r NWSH01000007.1:28790-29026 > depth/OR6_CDS_5.depth
+samtools depth -f Hv_bamfiles.txt  -r NWSH01000007.1:29550-29652 > depth/OR6_CDS_6.depth
+samtools depth -f Hv_bamfiles.txt  -r NWSH01000007.1:29719-29814 > depth/OR6_CDS_7.depth 
+samtools depth -f Hv_bamfiles.txt  -r NWSH01000007.1:30373-30528 > depth/OR6_CDS_8.depth 
+cd depth/
+cat OR6_CDS_*.depth > OR6_CDS.depth
 
 ## OR14 gene
 samtools depth -f Hv_bamfiles.txt -r NWSH01000007.1:78506-83663 > depth/OR14_gene.depth
 ## OR14 CDS
-samtools depth -f Hv_bamfiles.txt -r NWSH01000007.1:83472-83515 | samtools depth -f Hv_bamfiles.txt -r NWSH01000007.1:82882-83158 | samtools depth -f Hv_bamfiles.txt -r NWSH01000007.1:82202-82312 | samtools depth -f Hv_bamfiles.txt -r NWSH01000007.1:81610-81842 | samtools depth -f Hv_bamfiles.txt -r NWSH01000007.1:80866-81120 | samtools depth -f Hv_bamfiles.txt -r NWSH01000007.1:80475-80577 | samtools depth -f Hv_bamfiles.txt -r NWSH01000007.1:79723-79818 | samtools depth -f Hv_bamfiles.txt -r NWSH01000007.1:79566-79571 > depth/OR14_CDS.depth
+samtools depth -f Hv_bamfiles.txt -r NWSH01000007.1:83472-83515 > depth/OR14_CDS_1.depth
+samtools depth -f Hv_bamfiles.txt -r NWSH01000007.1:82882-83158 > depth/OR14_CDS_2.depth
+samtools depth -f Hv_bamfiles.txt -r NWSH01000007.1:82202-82312 > depth/OR14_CDS_3.depth
+samtools depth -f Hv_bamfiles.txt -r NWSH01000007.1:81610-81842 > depth/OR14_CDS_4.depth 
+samtools depth -f Hv_bamfiles.txt -r NWSH01000007.1:80866-81120 > depth/OR14_CDS_5.depth 
+samtools depth -f Hv_bamfiles.txt -r NWSH01000007.1:80475-80577 > depth/OR14_CDS_6.depth
+samtools depth -f Hv_bamfiles.txt -r NWSH01000007.1:79723-79818 > depth/OR14_CDS_7.depth 
+samtools depth -f Hv_bamfiles.txt -r NWSH01000007.1:79566-79571 > depth/OR14_CDS_8.depth
+cd depth/
+cat OR14_CDS_*.depth > OR14_CDS.depth
 
 ## OR16 gene
 samtools depth -f Hv_bamfiles.txt -r NWSH01000007.1:58307-64441 > depth/OR16_gene.depth
