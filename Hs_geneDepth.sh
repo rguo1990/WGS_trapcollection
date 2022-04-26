@@ -37,3 +37,45 @@ samtools depth -f Hs_bamfiles.txt -r Scaffold_656_new:182072-182119 > Hs_tom/dep
 cd Hs_tom/depth/
 cat OR14_CDS_*.depth > OR14_CDS.depth
 
+## OR16 gene
+samtools depth -f Hs_bamfiles.txt -r Scaffold_656_new:199741-206825 > Hs_tom/depth/OR16_gene.depth
+## OR16 CDS
+, , , , , , , , 
+samtools depth -f Hs_bamfiles.txt -r Scaffold_656_new:206203-206243 > Hs_tom/depth/OR16_CDS_1.depth
+samtools depth -f Hs_bamfiles.txt -r Scaffold_656_new:205652-205910 > Hs_tom/depth/OR16_CDS_2.depth
+samtools depth -f Hs_bamfiles.txt -r Scaffold_656_new:205127-205237 > Hs_tom/depth/OR16_CDS_3.depth
+samtools depth -f Hs_bamfiles.txt -r Scaffold_656_new:204102-204334 > Hs_tom/depth/OR16_CDS_4.depth
+samtools depth -f Hs_bamfiles.txt -r Scaffold_656_new:203280-203501 > Hs_tom/depth/OR16_CDS_5.depth
+samtools depth -f Hs_bamfiles.txt -r Scaffold_656_new:202381-202483 > Hs_tom/depth/OR16_CDS_6.depth
+samtools depth -f Hs_bamfiles.txt -r Scaffold_656_new:202210-202305 > Hs_tom/depth/OR16_CDS_7.depth
+samtools depth -f Hs_bamfiles.txt -r Scaffold_656_new:201615-201770 > Hs_tom/depth/OR16_CDS_8.depth
+samtools depth -f Hs_bamfiles.txt -r Scaffold_656_new:199926-199973 > Hs_tom/depth/OR16_CDS_9.depth
+
+cd Hs_tom/depth/
+cat OR16_CDS_*.depth > OR16_CDS.depth
+
+## OR13 gene
+samtools depth -f Hv_bamfiles.txt -r NWSH01002174.1:97-4097 > depth/OR13_gene.depth
+## OR13 CDS
+samtools depth -f Hv_bamfiles.txt -r NWSH01002174.1:97-709 > depth/OR13_CDS_1.depth
+samtools depth -f Hv_bamfiles.txt -r NWSH01002174.1:2387-2582 > depth/OR13_CDS_2.depth
+samtools depth -f Hv_bamfiles.txt -r NWSH01002174.1:2951-3165 > depth/OR13_CDS_3.depth
+samtools depth -f Hv_bamfiles.txt -r NWSH01002174.1:3370-4097 > depth/OR13_CDS_4.depth
+cd depth/
+cat OR13_CDS_*.depth > OR13_CDS.depth
+
+## orco gene
+samtools depth -f Hv_bamfiles.txt -r NWSH01000897.1:13533-34538 > depth/orco_gene.depth
+## orco CDS
+samtools depth -f Hv_bamfiles.txt -r NWSH01000897.1:29259-29358 > depth/orco_CDS_1.depth
+samtools depth -f Hv_bamfiles.txt -r NWSH01000897.1:28112-28322 > depth/orco_CDS_2.depth
+samtools depth -f Hv_bamfiles.txt -r NWSH01000897.1:21276-21412 > depth/orco_CDS_3.depth
+samtools depth -f Hv_bamfiles.txt -r NWSH01000897.1:19216-19376 > depth/orco_CDS_4.depth
+samtools depth -f Hv_bamfiles.txt -r NWSH01000897.1:18769-18955 > depth/orco_CDS_5.depth
+samtools depth -f Hv_bamfiles.txt -r NWSH01000897.1:18130-18340 > depth/orco_CDS_6.depth
+samtools depth -f Hv_bamfiles.txt -r NWSH01000897.1:16132-16231 > depth/orco_CDS_7.depth
+samtools depth -f Hv_bamfiles.txt -r NWSH01000897.1:14799-14903 > depth/orco_CDS_8.depth
+samtools depth -f Hv_bamfiles.txt -r NWSH01000897.1:14241-14396 > depth/orco_CDS_9.depth
+samtools depth -f Hv_bamfiles.txt -r NWSH01000897.1:13665-13715 > depth/orco_CDS_10.depth
+cd depth/
+cat orco_CDS_*.depth > orco_CDS.depth
