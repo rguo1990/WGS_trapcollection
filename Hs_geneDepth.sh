@@ -40,7 +40,6 @@ cat OR14_CDS_*.depth > OR14_CDS.depth
 ## OR16 gene
 samtools depth -f Hs_bamfiles.txt -r Scaffold_656_new:199741-206825 > Hs_tom/depth/OR16_gene.depth
 ## OR16 CDS
-, , , , , , , , 
 samtools depth -f Hs_bamfiles.txt -r Scaffold_656_new:206203-206243 > Hs_tom/depth/OR16_CDS_1.depth
 samtools depth -f Hs_bamfiles.txt -r Scaffold_656_new:205652-205910 > Hs_tom/depth/OR16_CDS_2.depth
 samtools depth -f Hs_bamfiles.txt -r Scaffold_656_new:205127-205237 > Hs_tom/depth/OR16_CDS_3.depth
@@ -55,27 +54,32 @@ cd Hs_tom/depth/
 cat OR16_CDS_*.depth > OR16_CDS.depth
 
 ## OR13 gene
-samtools depth -f Hv_bamfiles.txt -r NWSH01002174.1:97-4097 > depth/OR13_gene.depth
+samtools depth -f Hs_bamfiles.txt -r Scaffold_2038:135542-140490 > Hs_tom/depth/OR13_gene.depth
 ## OR13 CDS
-samtools depth -f Hv_bamfiles.txt -r NWSH01002174.1:97-709 > depth/OR13_CDS_1.depth
-samtools depth -f Hv_bamfiles.txt -r NWSH01002174.1:2387-2582 > depth/OR13_CDS_2.depth
-samtools depth -f Hv_bamfiles.txt -r NWSH01002174.1:2951-3165 > depth/OR13_CDS_3.depth
-samtools depth -f Hv_bamfiles.txt -r NWSH01002174.1:3370-4097 > depth/OR13_CDS_4.depth
-cd depth/
+samtools depth -f Hs_bamfiles.txt -r Scaffold_2038:135623-135654 > Hs_tom/depth/OR13_CDS_1.depth
+samtools depth -f Hs_bamfiles.txt -r Scaffold_2038:135862-136099 > Hs_tom/depth/OR13_CDS_2.depth
+samtools depth -f Hs_bamfiles.txt -r Scaffold_2038:136920-137027 > Hs_tom/depth/OR13_CDS_3.depth
+samtools depth -f Hs_bamfiles.txt -r Scaffold_2038:137199-137680 > Hs_tom/depth/OR13_CDS_4.depth
+samtools depth -f Hs_bamfiles.txt -r Scaffold_2038:137904-138006 > Hs_tom/depth/OR13_CDS_5.depth
+samtools depth -f Hs_bamfiles.txt -r Scaffold_2038:138158-138253 > Hs_tom/depth/OR13_CDS_6.depth
+samtools depth -f Hs_bamfiles.txt -r Scaffold_2038:138520-138675 > Hs_tom/depth/OR13_CDS_7.depth
+samtools depth -f Hs_bamfiles.txt -r Scaffold_2038:140086-140148 > Hs_tom/depth/OR13_CDS_8.depth
+cd Hs_tom/depth/
 cat OR13_CDS_*.depth > OR13_CDS.depth
 
 ## orco gene
-samtools depth -f Hv_bamfiles.txt -r NWSH01000897.1:13533-34538 > depth/orco_gene.depth
+samtools depth -f Hs_bamfiles.txt -r Scaffold_8:38994-54701 > Hs_tom/depth/orco_gene.depth
 ## orco CDS
-samtools depth -f Hv_bamfiles.txt -r NWSH01000897.1:29259-29358 > depth/orco_CDS_1.depth
-samtools depth -f Hv_bamfiles.txt -r NWSH01000897.1:28112-28322 > depth/orco_CDS_2.depth
-samtools depth -f Hv_bamfiles.txt -r NWSH01000897.1:21276-21412 > depth/orco_CDS_3.depth
-samtools depth -f Hv_bamfiles.txt -r NWSH01000897.1:19216-19376 > depth/orco_CDS_4.depth
-samtools depth -f Hv_bamfiles.txt -r NWSH01000897.1:18769-18955 > depth/orco_CDS_5.depth
-samtools depth -f Hv_bamfiles.txt -r NWSH01000897.1:18130-18340 > depth/orco_CDS_6.depth
-samtools depth -f Hv_bamfiles.txt -r NWSH01000897.1:16132-16231 > depth/orco_CDS_7.depth
-samtools depth -f Hv_bamfiles.txt -r NWSH01000897.1:14799-14903 > depth/orco_CDS_8.depth
-samtools depth -f Hv_bamfiles.txt -r NWSH01000897.1:14241-14396 > depth/orco_CDS_9.depth
-samtools depth -f Hv_bamfiles.txt -r NWSH01000897.1:13665-13715 > depth/orco_CDS_10.depth
-cd depth/
+samtools depth -f Hs_bamfiles.txt -r Scaffold_8:54602-54701 > Hs_tom/depth/orco_CDS_1.depth
+samtools depth -f Hs_bamfiles.txt -r Scaffold_8:53477-53687 > Hs_tom/depth/orco_CDS_2.depth
+samtools depth -f Hs_bamfiles.txt -r Scaffold_8:49768-49904 > Hs_tom/depth/orco_CDS_3.depth
+samtools depth -f Hs_bamfiles.txt -r Scaffold_8:46998-47158 > Hs_tom/depth/orco_CDS_4.depth
+samtools depth -f Hs_bamfiles.txt -r Scaffold_8:46320-46506 > Hs_tom/depth/orco_CDS_5.depth
+samtools depth -f Hs_bamfiles.txt -r Scaffold_8:45656-45866 > Hs_tom/depth/orco_CDS_6.depth
+samtools depth -f Hs_bamfiles.txt -r Scaffold_8:41461-41560 > Hs_tom/depth/orco_CDS_7.depth
+samtools depth -f Hs_bamfiles.txt -r Scaffold_8:40055-40159 > Hs_tom/depth/orco_CDS_8.depth
+samtools depth -f Hs_bamfiles.txt -r Scaffold_8:39205-39360 > Hs_tom/depth/orco_CDS_9.depth
+samtools depth -f Hs_bamfiles.txt -r Scaffold_8:38994-39044 > Hs_tom/depth/orco_CDS_10.depth
+cd Hs_tom/depth/
 cat orco_CDS_*.depth > orco_CDS.depth
+
