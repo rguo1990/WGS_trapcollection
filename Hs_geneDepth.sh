@@ -8,14 +8,14 @@ samtools depth -f Hs_bamfiles.txt -r Scaffold_4031_rc.Scaffold_489:21136-21176 >
 samtools depth -f Hs_bamfiles.txt -r Scaffold_4031_rc.Scaffold_489:19954-20042 > Hs_tom/depth/OR6_CDS_2.depth 
 samtools depth -f Hs_bamfiles.txt -r Scaffold_4031_rc.Scaffold_489:19633-19802 > Hs_tom/depth/OR6_CDS_3.depth 
 samtools depth -f Hs_bamfiles.txt -r Scaffold_4031_rc.Scaffold_489:19056-19166 > Hs_tom/depth/OR6_CDS_4.depth
-samtools depth -f Hs_bamfiles.txt  -r Scaffold_4031_rc.Scaffold_489:18496-18728 > Hs_tom/depth/OR6_CDS_5.depth
-samtools depth -f Hs_bamfiles.txt  -r Scaffold_4031_rc.Scaffold_489:16941-17156 > Hs_tom/depth/OR6_CDS_6.depth
-samtools depth -f Hs_bamfiles.txt  -r Scaffold_4031_rc.Scaffold_489:16455-16557 > Hs_tom/depth/OR6_CDS_7.depth 
-samtools depth -f Hs_bamfiles.txt  -r Scaffold_4031_rc.Scaffold_489:16313-16375 > Hs_tom/depth/OR6_CDS_8.depth 
-samtools depth -f Hs_bamfiles.txt  -r Scaffold_4031_rc.Scaffold_489:16145-16177 > Hs_tom/depth/OR6_CDS_9.depth 
-samtools depth -f Hs_bamfiles.txt  -r Scaffold_4031_rc.Scaffold_489:15655-15728 > Hs_tom/depth/OR6_CDS_10.depth 
-samtools depth -f Hs_bamfiles.txt  -r Scaffold_4031_rc.Scaffold_489:15449-15530 > Hs_tom/depth/OR6_CDS_11.depth 
-samtools depth -f Hs_bamfiles.txt  -r Scaffold_4031_rc.Scaffold_489:10583-10642 > Hs_tom/depth/OR6_CDS_12.depth 
+samtools depth -f Hs_bamfiles.txt -r Scaffold_4031_rc.Scaffold_489:18496-18728 > Hs_tom/depth/OR6_CDS_5.depth
+samtools depth -f Hs_bamfiles.txt -r Scaffold_4031_rc.Scaffold_489:16941-17156 > Hs_tom/depth/OR6_CDS_6.depth
+samtools depth -f Hs_bamfiles.txt -r Scaffold_4031_rc.Scaffold_489:16455-16557 > Hs_tom/depth/OR6_CDS_7.depth 
+samtools depth -f Hs_bamfiles.txt -r Scaffold_4031_rc.Scaffold_489:16313-16375 > Hs_tom/depth/OR6_CDS_8.depth 
+samtools depth -f Hs_bamfiles.txt -r Scaffold_4031_rc.Scaffold_489:16145-16177 > Hs_tom/depth/OR6_CDS_9.depth 
+samtools depth -f Hs_bamfiles.txt -r Scaffold_4031_rc.Scaffold_489:15655-15728 > Hs_tom/depth/OR6_CDS_10.depth 
+samtools depth -f Hs_bamfiles.txt -r Scaffold_4031_rc.Scaffold_489:15449-15530 > Hs_tom/depth/OR6_CDS_11.depth 
+samtools depth -f Hs_bamfiles.txt -r Scaffold_4031_rc.Scaffold_489:10583-10642 > Hs_tom/depth/OR6_CDS_12.depth 
 
 cd Hs_tom/depth
 cat OR6_CDS_*.depth > OR6_CDS.depth
