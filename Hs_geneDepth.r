@@ -2,6 +2,7 @@
 ## x axis: gene loci
 ## y axis: average read alignment depth among 20 Hs individuals
 
+library(ggplot2)
 ## OR6_gene.depth was made by samtools depth
 or6_depth <- read.csv("/Users/rongguo/Downloads/Hs/OR6_gene.depth",sep = "\t",header = FALSE)
 names <- c("Scaffold","pos","tom10","tom1","tom2","tom3","tom4","tom5","tom6","tom7","tom8","tom9",
