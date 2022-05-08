@@ -87,7 +87,7 @@ write.fasta(ori_or16_cdna, "OR16_cDNA", "~/Downloads/OR16_cDNA.fa", open = "w", 
 ## OR6
 Hvtom_1=Hvtom10
 Hvtom_2=Hvtom10
-for (j in 1:20){
+for (j in 1:18){
   for (i in positions){
     l=as.integer(i)
     Hvtom_1 <- paste(subseq(Hvtom_1,1,l-1),str_split(df6_cds[,i][j],"/")[[1]][1],subseq(Hvtom_1,l+1,31000),sep = "")
@@ -103,6 +103,13 @@ for (j in 1:20){
     path = paste("~/Downloads/",b,"OR6_cDNA_1.fa",sep="")
     
     write.fasta(Hvtom_or6_cdna_1, name, path, open = "w", nbchar = 60, as.string = FALSE)
+    
+    detach("package:seqinr", unload=TRUE)
+    or6_protein_1 <- as.character(translate(DNAString(Hvtom_or6_cdna_1),if.fuzzy.codon="X"))
+    name = paste(b,"OR6_pep_1",sep="")
+    path = paste("~/Downloads/",b,"OR6_pep_1.fa",sep="")
+    library("seqinr")
+    write.fasta(or6_protein_1, name, path, open = "w", nbchar = 60, as.string = FALSE)
 
     Hvtom_or6_cdna_2 <- paste(subseq(Hvtom_2,26260,26300),subseq(Hvtom_2,26725,26983),subseq(Hvtom_2,27443,27553),
                               subseq(Hvtom_2,28260,28492),subseq(Hvtom_2,28790,29026),subseq(Hvtom_2,29550,29652),
@@ -111,12 +118,19 @@ for (j in 1:20){
     path = paste("~/Downloads/",b,"OR6_cDNA_2.fa",sep="")
     write.fasta(Hvtom_or6_cdna_2, name, path, open = "w", nbchar = 60, as.string = FALSE)
     
+    detach("package:seqinr", unload=TRUE)
+    or6_protein_2 <- as.character(translate(DNAString(Hvtom_or6_cdna_2),if.fuzzy.codon="X"))
+    name = paste(b,"OR6_pep_2",sep="")
+    path = paste("~/Downloads/",b,"OR6_pep_2.fa",sep="")
+    library("seqinr")
+    write.fasta(or6_protein_2, name, path, open = "w", nbchar = 60, as.string = FALSE)
+    
 }
   
 ## OR14
 Hvtom_1=Hvtom10
 Hvtom_2=Hvtom10
-for (j in 1:20){
+for (j in 1:18){
   for (i in positions_2){
     l=as.integer(i)
     Hvtom_1 <- paste(subseq(Hvtom_1,1,l-1),str_split(df14_cds[,i][j],"/")[[1]][1],subseq(Hvtom_1,l+1,90000),sep = "")
@@ -142,7 +156,7 @@ for (j in 1:20){
     write.fasta(Hvtom_or14_cdna_1, name, path, open = "w", nbchar = 60, as.string = FALSE)
     
     detach("package:seqinr", unload=TRUE)
-    or14_protein_1 <- as.character(translate(DNAString(Hvtom_or14_cdna_1)))
+    or14_protein_1 <- as.character(translate(DNAString(Hvtom_or14_cdna_1),if.fuzzy.codon="X"))
     name = paste(b,"OR14_pep_1",sep="")
     path = paste("~/Downloads/",b,"OR14_pep_1.fa",sep="")
     library("seqinr")
@@ -166,7 +180,7 @@ for (j in 1:20){
     write.fasta(Hvtom_or14_cdna_2, name, path, open = "w", nbchar = 60, as.string = FALSE)
     
     detach("package:seqinr", unload=TRUE)
-    or14_protein_2 <- as.character(translate(DNAString(Hvtom_or14_cdna_2)))
+    or14_protein_2 <- as.character(translate(DNAString(Hvtom_or14_cdna_2),if.fuzzy.codon="X"))
     name = paste(b,"OR14_pep_2",sep="")
     path = paste("~/Downloads/",b,"OR14_pep_2.fa",sep="")
     library("seqinr")
@@ -177,7 +191,7 @@ for (j in 1:20){
 ## OR15
 Hvtom_1=Hvtom10
 Hvtom_2=Hvtom10
-for (j in 1:20){
+for (j in 1:18){
   for (i in positions_3){
     l=as.integer(i)
     Hvtom_1 <- paste(subseq(Hvtom_1,1,l-1),str_split(df15_cds[,i][j],"/")[[1]][1],subseq(Hvtom_1,l+1,80000),sep = "")
@@ -225,7 +239,7 @@ for (j in 1:20){
 ## OR16
 Hvtom_1=Hvtom10
 Hvtom_2=Hvtom10
-for (j in 1:20){
+for (j in 1:18){
   for (i in positions_4){
     l=as.integer(i)
     Hvtom_1 <- paste(subseq(Hvtom_1,1,l-1),str_split(df16_cds[,i][j],"/")[[1]][1],subseq(Hvtom_1,l+1,65000),sep = "")
@@ -266,4 +280,6 @@ for (j in 1:20){
     library("seqinr")
     write.fasta(or16_protein_2, name, path, open = "w", nbchar = 60, as.string = FALSE)
     
+
 }
+
