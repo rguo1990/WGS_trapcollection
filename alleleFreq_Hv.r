@@ -383,8 +383,8 @@ for (i in 1:18){
   or[i] = paste(fa)
 }
 
-## 5 diversity positions in total
-var=c(60,64,74,81,334)
+## 13 diversity positions in total
+var=c(60,64,74,81,334,343,411,416,423,429,432,463,546)
 agct=NULL
 l=length(var)
 for (j in 1:l){
@@ -410,7 +410,7 @@ df<-data.frame(d)
 colnames(df) <- c("AGCT","Freq","Pos")
 df_new <- subset(df,Freq!=18)
 ## df_new$Freq
-Frequency <- c(9,9,6,12,6,12,11,7,10,8,11,7)
+Frequency <- c(9,9,6,12,6,12,11,7,10,8,11,7,1,17,16,2,15,3,7,11,11,7,16,2,17,1,14,4,3,15)
 Group1 <- Frequency
 
 png("AF_OR13_Hvtob.png",units="in", width=8, height=8,res=300)
@@ -435,7 +435,7 @@ for (i in 1:18){
   or[i] = paste(fa)
 }
 
-var=c(60,64,74,81,334)
+var=c(60,64,74,81,334,343,411,416,423,429,432,463,546)
 agct=NULL
 l=length(var)
 for (j in 1:l){
@@ -461,7 +461,7 @@ df<-data.frame(d)
 colnames(df) <- c("AGCT","Freq","Pos")
 df_new <- subset(df,Freq!=18)
 ## df_new$Freq
-Frequency <- c(5,13,4,14,4,14,15,3,4,14,10,8)
+Frequency <- c(5,13,4,14,4,14,15,3,4,14,10,8,4,14,15,3,16,2,14,4,4,14,13,5,12,6,12,6,5,13)
 Group2 <- Frequency
 
 png("AF_OR13_Hvtom.png",units="in", width=8, height=8,res=300)
@@ -483,4 +483,22 @@ fisher.test(f[9:10,])$p.value
 ## p-value=0.08580226
 fisher.test(f[11:12,])$p.value
 ## p-value=1
+fisher.test(f[13:14,])$p.value
+## p-value=0.3376623
+fisher.test(f[15:16,])$p.value
+## p-value=1
+fisher.test(f[17:18,])$p.value
+## p-value=1
+fisher.test(f[19:20,])$p.value
+## p-value=0.0409118
+fisher.test(f[21:22,])$p.value
+## p-value=0.0409118
+fisher.test(f[23:24,])$p.value
+## p-value=0.4017595
+fisher.test(f[25:26,])$p.value
+## p-value=0.08768328
+fisher.test(f[27:28,])$p.value
+## p-value=0.7111943
+fisher.test(f[29:30,])$p.value
+## p-value=0.6905653
 
