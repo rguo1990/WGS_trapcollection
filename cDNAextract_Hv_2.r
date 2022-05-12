@@ -27,7 +27,7 @@ colnames(dforco_cds)=positions_1
 ## OR13
 or13_pos <- or13$V2
 colnames(or13_vcf) <- or13_pos
-or13_cds <- or13_vcf[,or13_pos %in% c(97:709, 2387:2582, 2951:3165, 3370-4097)]
+or13_cds <- or13_vcf[,or13_pos %in% c(97:709, 2387:2582, 2951:3165, 3370:4097)]
 positions_2 <- colnames(or13_cds)
 df13_cds <- data.frame(or13_cds)
 colnames(df13_cds)=positions_2
