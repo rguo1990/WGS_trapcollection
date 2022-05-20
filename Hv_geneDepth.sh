@@ -66,3 +66,19 @@ samtools depth -f Hv_bamfiles.txt -r NWSH01000897.1:14241-14396 > depth/orco_CDS
 samtools depth -f Hv_bamfiles.txt -r NWSH01000897.1:13665-13715 > depth/orco_CDS_10.depth
 cd depth/
 cat orco_CDS_*.depth > orco_CDS.depth
+
+## OR11 
+samtools depth -f Hv_bamfiles.txt -r NWSH01001866.1:45142-49299 > depth/OR11_gene.depth
+
+## CDS
+samtools depth -f Hv_bamfiles.txt -r NWSH01001866.1:49235-49266 > depth/OR11_CDS_1.depth
+samtools depth -f Hv_bamfiles.txt -r NWSH01001866.1:48784-49021 > depth/OR11_CDS_2.depth
+samtools depth -f Hv_bamfiles.txt -r NWSH01001866.1:48251-48358 > depth/OR11_CDS_3.depth
+samtools depth -f Hv_bamfiles.txt -r NWSH01001866.1:47610-48094 > depth/OR11_CDS_4.depth
+samtools depth -f Hv_bamfiles.txt -r NWSH01001866.1:47256-47358 > depth/OR11_CDS_5.depth
+samtools depth -f Hv_bamfiles.txt -r NWSH01001866.1:46147-46242 > depth/OR11_CDS_6.depth
+samtools depth -f Hv_bamfiles.txt -r NWSH01001866.1:45726-45881 > depth/OR11_CDS_7.depth
+samtools depth -f Hv_bamfiles.txt -r NWSH01001866.1:45351-45410 > depth/OR11_CDS_8.depth
+cd depth/
+cat OR11_CDS_*.depth > OR11_CDS.depth
+
