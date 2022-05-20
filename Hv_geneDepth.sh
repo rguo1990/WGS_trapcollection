@@ -1,7 +1,7 @@
 ## the script was used to measure the mean depth of the whole genes vs. their CDS
 
 ## OR6 gene
-samtools depth -f Hv_bamfiles.txt -r NWSH01000007.1:26260-30528 > depth/OR6_gene.depth
+samtools depth -f Hv_bamfiles.txt -r NWSH01000007.1:26260-30918 > depth/OR6_gene.depth
 ## OR6 CDS
 samtools depth -f Hv_bamfiles.txt  -r NWSH01000007.1:26260-26300 > depth/OR6_CDS_1.depth 
 samtools depth -f Hv_bamfiles.txt  -r NWSH01000007.1:26725-26983 > depth/OR6_CDS_2.depth 
@@ -11,6 +11,7 @@ samtools depth -f Hv_bamfiles.txt  -r NWSH01000007.1:28790-29026 > depth/OR6_CDS
 samtools depth -f Hv_bamfiles.txt  -r NWSH01000007.1:29550-29652 > depth/OR6_CDS_6.depth
 samtools depth -f Hv_bamfiles.txt  -r NWSH01000007.1:29719-29814 > depth/OR6_CDS_7.depth 
 samtools depth -f Hv_bamfiles.txt  -r NWSH01000007.1:30373-30528 > depth/OR6_CDS_8.depth 
+samtools depth -f Hv_bamfiles.txt  -r NWSH01000007.1:30783-30842 > depth/OR6_CDS_9.depth
 cd depth/
 cat OR6_CDS_*.depth > OR6_CDS.depth
 
