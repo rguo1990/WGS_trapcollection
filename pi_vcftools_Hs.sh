@@ -18,7 +18,7 @@ vcftools --chr Scaffold_656_new --from-bp 199741 --to-bp 206825 --out Pi-OR16-Hs
 vcftools --chr Scaffold_656_new --from-bp 199741 --to-bp 206825 --out OR16-Hs --recode --vcf Filtered_Hspopulation.recode.vcf
 
 ## Orco
-vcftools --chr  Scaffold_8 --from-bp 38994 --to-bp 54701 --out Pi-Orco-Hs --site-pi --vcf Filtered_Hspopulation.recode.vcf
-vcftools --chr  Scaffold_8 --from-bp 38994 --to-bp 54701 --out Orco-Hs --recode --vcf Filtered_Hspopulation.recode.vcf
+vcftools --chr  Scaffold_68 --from-bp 38994 --to-bp 54701 --out Pi-Orco-Hs --site-pi --vcf Filtered_Hspopulation.recode.vcf
+vcftools --chr  Scaffold_68 --from-bp 38994 --to-bp 54701 --out Orco-Hs --recode --vcf Filtered_Hspopulation.recode.vcf
 
 
