@@ -68,18 +68,18 @@ cd Hs_tom/depth/
 cat OR13_CDS_*.depth > OR13_CDS.depth
 
 ## orco gene
-samtools depth -f Hs_bamfiles.txt -r Scaffold_8:38994-54701 > Hs_tom/depth/orco_gene.depth
+samtools depth -f Hs_bamfiles.txt -r Scaffold_68:38994-54701 > Hs_tom/depth/orco_gene.depth
 ## orco CDS
-samtools depth -f Hs_bamfiles.txt -r Scaffold_8:54602-54701 > Hs_tom/depth/orco_CDS_1.depth
-samtools depth -f Hs_bamfiles.txt -r Scaffold_8:53477-53687 > Hs_tom/depth/orco_CDS_2.depth
-samtools depth -f Hs_bamfiles.txt -r Scaffold_8:49768-49904 > Hs_tom/depth/orco_CDS_3.depth
-samtools depth -f Hs_bamfiles.txt -r Scaffold_8:46998-47158 > Hs_tom/depth/orco_CDS_4.depth
-samtools depth -f Hs_bamfiles.txt -r Scaffold_8:46320-46506 > Hs_tom/depth/orco_CDS_5.depth
-samtools depth -f Hs_bamfiles.txt -r Scaffold_8:45656-45866 > Hs_tom/depth/orco_CDS_6.depth
-samtools depth -f Hs_bamfiles.txt -r Scaffold_8:41461-41560 > Hs_tom/depth/orco_CDS_7.depth
-samtools depth -f Hs_bamfiles.txt -r Scaffold_8:40055-40159 > Hs_tom/depth/orco_CDS_8.depth
-samtools depth -f Hs_bamfiles.txt -r Scaffold_8:39205-39360 > Hs_tom/depth/orco_CDS_9.depth
-samtools depth -f Hs_bamfiles.txt -r Scaffold_8:38994-39044 > Hs_tom/depth/orco_CDS_10.depth
+samtools depth -f Hs_bamfiles.txt -r Scaffold_68:54602-54701 > Hs_tom/depth/orco_CDS_1.depth
+samtools depth -f Hs_bamfiles.txt -r Scaffold_68:53477-53687 > Hs_tom/depth/orco_CDS_2.depth
+samtools depth -f Hs_bamfiles.txt -r Scaffold_68:49768-49904 > Hs_tom/depth/orco_CDS_3.depth
+samtools depth -f Hs_bamfiles.txt -r Scaffold_68:46998-47158 > Hs_tom/depth/orco_CDS_4.depth
+samtools depth -f Hs_bamfiles.txt -r Scaffold_68:46320-46506 > Hs_tom/depth/orco_CDS_5.depth
+samtools depth -f Hs_bamfiles.txt -r Scaffold_68:45656-45866 > Hs_tom/depth/orco_CDS_6.depth
+samtools depth -f Hs_bamfiles.txt -r Scaffold_68:41461-41560 > Hs_tom/depth/orco_CDS_7.depth
+samtools depth -f Hs_bamfiles.txt -r Scaffold_68:40055-40159 > Hs_tom/depth/orco_CDS_8.depth
+samtools depth -f Hs_bamfiles.txt -r Scaffold_68:39205-39360 > Hs_tom/depth/orco_CDS_9.depth
+samtools depth -f Hs_bamfiles.txt -r Scaffold_68:38994-39044 > Hs_tom/depth/orco_CDS_10.depth
 cd Hs_tom/depth/
 cat orco_CDS_*.depth > orco_CDS.depth
 
